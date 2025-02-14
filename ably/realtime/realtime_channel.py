@@ -109,6 +109,7 @@ class RealtimeChannel(EventEmitter, Channel):
         attach_msg = {
             "action": ProtocolMessageAction.ATTACH,
             "channel": self.name,
+            "params": {"rewind":1}
         }
 
         if self.__attach_resume:
